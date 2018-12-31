@@ -16,18 +16,21 @@ class Triangle
     triangle.each { |length| 
     counts[length] += 1 }
     
-    
-# binding.pry
-      if counts.value?(3) && countsValid(counts) 
-        :equilateral
-      elsif counts.value?(2) && countsValid(counts) 
-        :isosceles
-      elsif counts.value?(1) && countsValid(counts) 
-        :scalene
-      else
-          raise TriangleError
-      end
+    if violatesInequality(triangle)
+      raise TriangleError
     end
+
+    if counts.value?(3) && countsValid(counts) 
+      :equilateral
+    elsif counts.value?(2) && countsValid(counts) 
+      :isosceles
+    elsif counts.value?(1) && countsValid(counts) 
+      :scalene
+    else
+        raise TriangleError
+    end
+    
+  end
     
   #violatesInequality tests if triangle violates triangle inequality principle
   def violatesInequality(array)
