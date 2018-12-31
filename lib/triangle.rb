@@ -35,7 +35,8 @@ class Triangle
 
   
   def countsValid(hash)
-    hash.keys.all? {|side| side > 0}
+    false if hash.keys.any? {|side| side <= 0}
+    
   end
   
   class TriangleError < StandardError
