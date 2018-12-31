@@ -12,7 +12,7 @@ class Triangle
   
   def kind
     triangle = [@sideone, @sidetwo, @sidethree]
-    counts = Hash.new 0
+    counts = Hash.new 0 #practice working with hashes
     triangle.each { |length| 
     counts[length] += 1 }
     
@@ -25,9 +25,7 @@ class Triangle
       elsif counts.value?(1) && countsValid(counts) 
         :scalene
       else
-
           raise TriangleError
-
       end
     end
 
