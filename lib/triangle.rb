@@ -28,6 +28,8 @@ class Triangle
           raise TriangleError
       end
     end
+    
+    
 
   
   def countsValid(hash)
