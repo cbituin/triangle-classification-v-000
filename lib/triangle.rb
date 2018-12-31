@@ -11,13 +11,9 @@ class Triangle
   end
   
   def kind
-<<<<<<< HEAD
     triangle = [@sideone, @sidetwo, @sidethree]
-=======
-    @triangle = [@sideone, @sidetwo, @sidethree]
->>>>>>> 5ed0bebbf3b5a619577978eb22e51adfcc10877e
     counts = Hash.new 0
-    @triangle.each { |length| 
+    triangle.each { |length| 
     counts[length] += 1 }
     
     
@@ -39,11 +35,7 @@ class Triangle
 
   
   def countsValid(hash)
-<<<<<<< HEAD
     hash.keys.all? {|side| side > 0}
-=======
-    hash.keys.none? {|side| side <= 0}
->>>>>>> 5ed0bebbf3b5a619577978eb22e51adfcc10877e
   end
   
   class TriangleError < StandardError
