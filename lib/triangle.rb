@@ -32,8 +32,8 @@ class Triangle
   #violatesInequality tests if triangle violates triangle inequality principle
   def violatesInequality(array)
     array[0] + array[1] < array[2] ||
-    array[0] + array[1] < array[2] ||
-    array[0] + array[1] < array[2]
+    array[2] + array[1] < array[0] ||
+    array[0] + array[2] < array[1]
   end
     
   #countsValid confirms number of equal sides
