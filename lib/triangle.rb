@@ -29,8 +29,10 @@ class Triangle
       end
     end
     
+  def violatesInequality(array)
     
-
+  end
+    
   
   def countsValid(hash)
     hash.keys.any? {|side| side <= 0} ? false : true
