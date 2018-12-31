@@ -25,11 +25,9 @@ class Triangle
       elsif counts.value?(1) && countsValid(counts) 
         :scalene
       else
-        begin
+
           raise TriangleError
-        rescue TriangleError => error
-          puts error.message
-        end
+
       end
     end
 
