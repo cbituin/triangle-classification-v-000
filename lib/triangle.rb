@@ -29,11 +29,14 @@ class Triangle
       end
     end
     
+  #violatesInequality tests if triangle violates triangle inequality principle
   def violatesInequality(array)
-    
+    array[0] + array[1] < array[2] ||
+    array[0] + array[1] < array[2] ||
+    array[0] + array[1] < array[2]
   end
     
-  
+  #countsValid confirms number of equal sides
   def countsValid(hash)
     hash.keys.any? {|side| side <= 0} ? false : true
   end
